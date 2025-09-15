@@ -1,0 +1,10 @@
+-- Initial schema v1
+CREATE TABLE notes (
+    id INTEGER NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    tags_json TEXT
+);
+
+CREATE INDEX idx_notes_created_at ON notes(created_at);
